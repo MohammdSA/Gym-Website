@@ -7,16 +7,11 @@ class Class(models.Model):
     duration = models.IntegerField(blank=False)
     intensity = models.CharField(max_length=10, blank=False)
     level = models.CharField(max_length=10, blank=False)
-    DAY_CHOICES = [
-        ('Monday', 'Monday'),
-        ('Tuesday', 'Tuesday'),
-        ('Wednesday', 'Wednesday'),
-        ('Thursday', 'Thursday'),
-        ('Friday', 'Friday'),
-        ('Saturday', 'Saturday'),
-        ('Sunday', 'Sunday'),
-    ]
-    schedule = models.CharField(max_length=20, choices=DAY_CHOICES, null=True)
+
+    # schedule = []
+
+    def __str__(self):
+        return f"{self.name} Class"
 
 class Schedule(models.Model):
     print("Schedule")

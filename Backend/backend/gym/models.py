@@ -4,10 +4,19 @@ from django.db import models
 class Class(models.Model):
     name = models.CharField(max_length=20, unique=True, blank=False)
     thumbnail = models.ImageField()
-    duration = models.IntegerField(max_length=3, blank=False)
+    duration = models.IntegerField(blank=False)
     intensity = models.CharField(max_length=10, blank=False)
     level = models.CharField(max_length=10, blank=False)
-    schedule = []
+    DAY_CHOICES = [
+        ('Monday', 'Monday'),
+        ('Tuesday', 'Tuesday'),
+        ('Wednesday', 'Wednesday'),
+        ('Thursday', 'Thursday'),
+        ('Friday', 'Friday'),
+        ('Saturday', 'Saturday'),
+        ('Sunday', 'Sunday'),
+    ]
+    schedule = models.CharField(max_length=20, choices=DAY_CHOICES, null=True)
 
 class Schedule(models.Model):
     print("Schedule")

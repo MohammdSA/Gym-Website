@@ -7,8 +7,7 @@ class Class(models.Model):
     duration = models.IntegerField(blank=False)
     intensity = models.CharField(max_length=10, blank=False)
     level = models.CharField(max_length=10, blank=False)
-
-    # schedule = []
+    schedule = models.TextField(blank=False, null=True)
 
     def __str__(self):
         return f"{self.name} Class"

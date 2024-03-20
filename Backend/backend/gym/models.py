@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Class(models.Model):
     name = models.CharField(max_length=20, unique=True, blank=False)
@@ -15,14 +16,28 @@ class Class(models.Model):
     def __str__(self):
         return f"{self.name} Class"
 
+
 class Schedule(models.Model):
     print("Schedule")
 
+
 class Trainer(models.Model):
-    print("Trainer")
+    name = models.CharField(max_length=20, unique=True)
+    summary = models.TextField()
+    thumbnail = models.ImageField()
+    proffession = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    location = models.CharField(max_length=50)
+    socialAccounts = models.JSONField()
+
+    def __str__(self):
+        return f"{self.name}"
+
 
 class Program(models.Model):
     print("Program")
+
 
 class Article(models.Model):
     print("Article")

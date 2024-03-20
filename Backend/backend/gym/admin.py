@@ -7,8 +7,10 @@ admin.site.register(Trainer)
 admin.site.register(Program)
 admin.site.register(Article)
 
+
 class ClassAdmin(admin.ModelAdmin):
     readonly_fields = ['date']
 
 
 admin.site.register(Class, ClassAdmin)
+

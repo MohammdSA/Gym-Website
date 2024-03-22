@@ -1,5 +1,6 @@
+from ckeditor.fields import RichTextField
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from ckeditor.widgets import CKEditorWidget
 
 
 # Create your models here.
@@ -11,7 +12,7 @@ class Class(models.Model):
     intensity = models.CharField(max_length=20, blank=False)
     level = models.CharField(max_length=20, blank=False)
     schedule = models.JSONField()
-    date = models.DateTimeField(auto_now_add=True)
+    creationDate = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=50, blank=False, null=True)
 
     def __str__(self):
@@ -34,6 +35,14 @@ class Trainer(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class Blog(models.Model):
+    creationDate = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=20)
+    author = models.CharField(max_length=20)
+    category = models.CharField(max_length=20)
+    content = RichTextField()
 
 
 class Program(models.Model):

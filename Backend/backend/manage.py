@@ -2,6 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from pathlib import Path
 
 
 def main():
@@ -16,6 +17,8 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    print(os.path.join(BASE_DIR.parent, 'Frontend\\frontend\\src'))
 
 
 if __name__ == '__main__':

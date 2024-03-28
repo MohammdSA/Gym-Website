@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import {ClassComponent} from "../class/class.component";
-import {UpcomingClass} from "../upcoming-class";
+import {Class} from "../class";
 import {RouterOutlet} from "@angular/router";
 
 @Component({
@@ -45,22 +45,5 @@ import {RouterOutlet} from "@angular/router";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  upcomingClassList: UpcomingClass[] = [
-    {
-      "id": 1,
-      "name": "Yoga as Therapy",
-      "description": "Objectively innovate empowered manufactured products",
-      "thumbnail": "assets/Image.png",
-    },
-    {"id": 3,
-      "name": "Pilates Training",
-      "description": "containing Lorem Ipsum passagesand more recently with",
-      "thumbnail": "assets/Pilates Training.png",
-    },
-    {"id": 4,
-      "name": "Aerobic Training",
-      "description": "containing Lorem Ipsum passagesand more recently with",
-      "thumbnail": "assets/Aerobic.png",
-    }
-  ];
+  upcomingClassList: Class[] = [];
 }

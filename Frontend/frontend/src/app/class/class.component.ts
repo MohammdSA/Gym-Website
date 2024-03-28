@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {CommonModule} from "@angular/common";
-import {UpcomingClass} from "../upcoming-class";
+import {Class} from "../class";
 import {RouterModule} from "@angular/router";
 
 @Component({
@@ -20,5 +20,5 @@ import {RouterModule} from "@angular/router";
   styleUrl: './class.component.css'
 })
 export class ClassComponent {
-  @Input() upcomingClass!: UpcomingClass;
+  @Input() upcomingClass!: Class;
 }

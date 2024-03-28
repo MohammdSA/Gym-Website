@@ -4,4 +4,3 @@ export interface UpcomingClass {
   description: string,
   thumbnail: string,
 }
-

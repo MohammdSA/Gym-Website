@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Class} from "./class";
+import {UpcomingClass} from "./upcoming-class";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClassService {
-  protected upcomingClassList: Class[] = [
+  protected upcomingClassList: UpcomingClass[] = [
     {
       "id": 1,
       "name": "Yoga as Therapy",
@@ -24,11 +24,11 @@ export class ClassService {
     }
   ];
   constructor() {}
-  getAllClasses() : Class[] {
+  getAllUpcomingClasses() : UpcomingClass[] {
     return this.upcomingClassList;
-    }
+  }
 
-  getClassById(id: Number): Class | undefined{
-    return this.upcomingClassList.find(sClass => sClass.id === id);
+  getUpcomingClassById(id: Number): UpcomingClass | undefined{
+    return this.upcomingClassList.find(upcomingClass => upcomingClass.id === id);
   }
 }

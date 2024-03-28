@@ -4,27 +4,33 @@
 }
 
  .upcomingClassImg{
-   width: 17.5em;
-   height: 17.5em;
+   width: 22em;
+   height: 22em;
+ }
+
+ .upcomingClassContent{
+   margin: 5% 0.8%;
+   padding: 0;
+   font-size: 20px;
  }
 
 .className{
+  font-size: 32px;
   text-align: left;
-  margin: 5% 0 0 0;
+  margin: 0;
   padding: 0;
 }
 
 .classDescription{
-  font-size: 14px;
   color: var(--darkGray);
   width: 16em;
   height: auto;
   margin: 3% 0;
   padding: 0;
+  opacity: 0.55;
 }
 
 .readMore{
-  font-size: 14px;
   text-decoration: none;
   color: var(--blue);
 }

@@ -9,9 +9,11 @@ import {UpcomingClass} from "../upcoming-class";
   template: `
     <section class="upcomingClass">
       <img [src]="upcomingClass.thumbnail" alt="Class Image" class="upcomingClassImg"/>
-      <h2 class="className">{{upcomingClass.name}}</h2>
-      <p class="classDescription">{{upcomingClass.description}}</p>
-      <a href="#" class="readMore">Read More</a>
+      <div class="upcomingClassContent">
+        <h2 class="className">{{upcomingClass.name}}</h2>
+        <p class="classDescription">{{upcomingClass.description}}</p>
+        <a href="#" class="readMore">Read More</a>
+      </div>
     </section>
   `,
   styleUrl: './upcoming-classes.component.css'

@@ -30,7 +30,7 @@
   opacity: 0.55;
 }
 
-.readMore{
+.upcomingClassContent a{
   text-decoration: none;
   color: var(--blue);
 }

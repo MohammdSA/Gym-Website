@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import {ClassComponent} from "../class/class.component";
 import {UpcomingClass} from "../upcoming-class";
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ClassComponent, ClassComponent],
+  imports: [CommonModule, ClassComponent, RouterOutlet],
   template: `
     <section class="homePageBanner">
       <img src="assets/banner.png">

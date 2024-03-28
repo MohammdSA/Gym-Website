@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import {UpcomingClass} from "../upcoming-class";
 
 @Component({
   selector: 'app-upcoming-classes',
@@ -12,9 +13,5 @@ import { Component } from '@angular/core';
   styleUrl: './upcoming-classes.component.css'
 })
 export class UpcomingClassesComponent {
-  url='http://127.0.0.1:8000'
-
-  constructor() {
-
-  }
+  @Input() upcomingClass!: UpcomingClass;
 }

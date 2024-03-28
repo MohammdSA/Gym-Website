@@ -4,7 +4,7 @@ import {UpcomingClassesComponent} from "../upcoming-classes/upcoming-classes.com
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [UpcomingClassesComponent],
+  imports: [UpcomingClassesComponent, UpcomingClassesComponent],
   template: `
     <header>
       <nav class="navBar">
@@ -47,6 +47,7 @@ import {UpcomingClassesComponent} from "../upcoming-classes/upcoming-classes.com
       </div>
       <app-upcoming-classes></app-upcoming-classes>
     </section>
+
     <section></section>
     <section></section>
     <section></section>

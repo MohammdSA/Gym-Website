@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
     <header>
       <nav class="navBar">
         <div class="navBarLogo">
-          <img src="assets\\Logo.png" alt="logo" />
+          <img src="assets/Logo.png" alt="logo" />
           <h2>Strengthy</h2>
         </div>
         <div class="navBarMenu">
@@ -35,6 +35,7 @@ import { RouterOutlet } from '@angular/router';
     <section></section>
     <section></section>
     <section></section>
+    <div class="test"></div>
 
     <footer>
       <div>
@@ -54,5 +55,4 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'frontend';
-}
+  title = 'frontend';}

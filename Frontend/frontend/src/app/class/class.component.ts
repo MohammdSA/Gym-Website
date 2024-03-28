@@ -1,23 +1,24 @@
 import { Component, Input } from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {UpcomingClass} from "../upcoming-class";
+import {RouterModule} from "@angular/router";
 
 @Component({
-  selector: 'app-upcoming-classes',
+  selector: 'app-class',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
     <section class="upcomingClass">
       <img [src]="upcomingClass.thumbnail" alt="Class Image" class="upcomingClassImg"/>
       <div class="upcomingClassContent">
         <h2 class="className">{{upcomingClass.name}}</h2>
         <p class="classDescription">{{upcomingClass.description}}</p>
-        <a href="#" class="readMore">Read More</a>
+        <a [routerLink]="['/classes', upcomingClass.id]" class="readMore">Read More</a>
       </div>
     </section>
   `,
-  styleUrl: './upcoming-classes.component.css'
+  styleUrl: './class.component.css'
 })
-export class UpcomingClassesComponent {
+export class ClassComponent {
   @Input() upcomingClass!: UpcomingClass;
 }

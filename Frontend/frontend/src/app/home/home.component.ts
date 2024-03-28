@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from "@angular/common";
-import {UpcomingClassesComponent} from "../upcoming-classes/upcoming-classes.component";
+import {ClassComponent} from "../class/class.component";
 import {UpcomingClass} from "../upcoming-class";
 
 @Component({
-  selector: 'app-home-page',
+  selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, UpcomingClassesComponent, UpcomingClassesComponent],
+  imports: [CommonModule, ClassComponent, ClassComponent],
   template: `
     <section class="homePageBanner">
       <img src="assets/banner.png">
@@ -29,7 +29,7 @@ import {UpcomingClass} from "../upcoming-class";
         <button class="btn" id="moreClass">More Class</button>
       </div>
       <div class="upcomingClassList">
-        <app-upcoming-classes *ngFor="let upcomingClass of upcomingClassList" [upcomingClass]="upcomingClass"></app-upcoming-classes>
+        <app-class *ngFor="let upcomingClass of upcomingClassList" [upcomingClass]="upcomingClass"></app-class>
       </div>
     </section>
 
@@ -41,9 +41,9 @@ import {UpcomingClass} from "../upcoming-class";
     <section></section>
     <div class="test"></div>
   `,
-  styleUrl: './home-page.component.css'
+  styleUrl: './home.component.css'
 })
-export class HomePageComponent {
+export class HomeComponent {
   upcomingClassList: UpcomingClass[] = [
     {
       "id": 1,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UpcomingClassesComponent } from './upcoming-classes.component';
+import { SingleClassComponent } from './single-class.component';
 
-describe('UpcomingClassesComponent', () => {
-  let component: UpcomingClassesComponent;
-  let fixture: ComponentFixture<UpcomingClassesComponent>;
+describe('SingleClassComponent', () => {
+  let component: SingleClassComponent;
+  let fixture: ComponentFixture<SingleClassComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UpcomingClassesComponent]
+      imports: [SingleClassComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(UpcomingClassesComponent);
+    fixture = TestBed.createComponent(SingleClassComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

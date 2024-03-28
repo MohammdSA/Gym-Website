@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-</head>
-<body>
-  <header>
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home-page',
+  standalone: true,
+  imports: [],
+  template: `
+    <header>
       <nav class="navBar">
         <div class="navBarLogo">
           <img src="assets/Logo.png" alt="logo" />
@@ -49,5 +49,9 @@
       </div>
       <div class="copyRight">Copyright © FitnessFit | Designed byVictorFlow Templates - Powered by Webflow</div>
     </footer>
-</body>
-</html>
+  `,
+  styleUrl: './home-page.component.css'
+})
+export class HomePageComponent {
+
+}

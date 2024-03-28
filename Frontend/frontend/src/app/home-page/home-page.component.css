@@ -163,14 +163,26 @@ body{
   border: none;
 }
 
+
+#classicPattern{
+  position: absolute;
+  right: 10%;
+  transform: translateY(-4em);
+  z-index: -99;
+  width: 55%;
+  height: auto;
+}
+
 .upcomingClasses{
   margin: 2% 20%;
+  z-index: 99;
 }
 
 .upcomingClassesHeader{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 5% 0;
 }
 
 .upcomingClassesHeaderText h3{
@@ -196,6 +208,11 @@ body{
   border: 2px solid var(--darkBlack);
 }
 
+.upcomingClassList{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 footer{
   position: relative;

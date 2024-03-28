@@ -1,0 +1,30 @@
+.upcomingClass{
+  display: flex;
+  flex-direction: column;
+}
+
+ .upcomingClassImg{
+   width: 17.5em;
+   height: 17.5em;
+ }
+
+.className{
+  text-align: left;
+  margin: 5% 0 0 0;
+  padding: 0;
+}
+
+.classDescription{
+  font-size: 14px;
+  color: var(--darkGray);
+  width: 16em;
+  height: auto;
+  margin: 3% 0;
+  padding: 0;
+}
+
+.readMore{
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--blue);
+}

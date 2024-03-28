@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@900&display=swap');
+
+::ng-deep :root{
+  --lightGreen: #A1F65E;
+  --darkBlue: #242F65;
+  --blue: #524FF5;
+  --lightGray: #F2F2F2;
+  --lightBlack: #2C323A;
+  --darkBlack: #1D2229;
+  --shadowBlack: #191C21;
+  --darkGray: #6A6A6A;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+
+.navBarLogo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-20%);
+}
+
+.navBarLogo img{
+  width: 12%;
+  margin-right: 1.5%;
+}
+
+.navBarMenu{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-10%);
+}
+
+.navBarMenu ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  transform: translateX(-60%);
+}
+
+.navBarMenu ul li{
+  margin-right: 10%;
+}
+
+.navBarMenu ul li a{
+  text-decoration: none;
+  color: var(--darkBlack);
+}
+
+.navBarMenu button{
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  color: var(--darkBlack);
+  background: var(--lightGray);
+  border: none;
+  padding: 1% 6%;
+  text-align: center;
+  text-wrap: avoid !important;
+  white-space: nowrap;
+}
+
+.homePageBanner img{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  scale: 92%;
+  z-index: -99;
+}
+
+.bannerContent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerContent h1{
+  color: var(--white);
+  font-weight: bolder;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: -4px 2px black;
+  margin: 8% 0;
+}
+
+.bannerBtn{
+  margin: 0 0 0 10px;
+  padding: 0;
+  width: 160px;
+  height: 45px;
+  font-size: 22px;
+}
+.bannerBtn:focus{
+  outline: none;
+}
+.bannerBtn:active{
+  transform: scale(0.98);
+}
+
+#startToday{
+  background-color: var(--lightGreen);
+  color: var(--black);
+  border: none;
+}
+#startToday:hover{
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+#aboutMe{
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+#aboutMe:hover{
+  background-color: var(--lightGreen);
+  color: var(--black);
+  border: none;
+}

@@ -25,7 +25,16 @@ import { Component } from '@angular/core';
       </nav>
     </header>
 
-    <section></section>
+    <section class="homePageBanner">
+      <img src="assets/banner.png">
+      <div class="bannerContent">
+        <h1>Keep Your Body <br> Fit & Strong</h1>
+        <div>
+          <button id="startToday" class="bannerBtn">Start Today</button>
+          <button id="aboutMe" class="bannerBtn">About Me</button>
+        </div>
+      </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>

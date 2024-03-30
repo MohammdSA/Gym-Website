@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import {ClassComponent} from "../class/class.component";
-import {Class} from "../class";
 import {RouterOutlet} from "@angular/router";
+import {Class} from "../class";
+import {ClassService} from "../class.service";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, ClassComponent, RouterOutlet],
   template: `
-    <section class="homePageBanner">
+    <section class="banner">
       <img src="assets/banner.png">
       <div class="bannerContent">
         <h1>Keep Your Body <br> Fit & Strong</h1>
@@ -40,10 +41,15 @@ import {RouterOutlet} from "@angular/router";
     <section></section>
     <section></section>
     <section></section>
-    <div class="test"></div>
   `,
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   upcomingClassList: Class[] = [];
+  upcomingClassService: ClassService = inject(ClassService);
+
+  constructor() {
+    this.upcomingClassList = this.upcomingClassService.getAllClasses();
+
+  }
 }

@@ -5,30 +5,66 @@ import {Class} from "./class";
   providedIn: 'root'
 })
 export class ClassService {
-  protected upcomingClassList: Class[] = [
+  protected ClassList: Class[] = [
     {
       "id": 1,
       "name": "Yoga as Therapy",
       "description": "Objectively innovate empowered manufactured products",
       "thumbnail": "assets/Image.png",
+      "duration": 45,
+      "intensity": "high",
+      "level": "Advanced",
+      "schedule": {
+        days: [
+          'Monday',
+          'Wednesday',
+          'Friday',
+        ]
+      },
+      "creationDate": "2024-03-20T15:59:31.168Z",
+      "category": "Fat Loss",
     },
     {"id": 3,
       "name": "Pilates Training",
       "description": "containing Lorem Ipsum passagesand more recently with",
       "thumbnail": "assets/Pilates Training.png",
+      "duration": 45,
+      "intensity": "high",
+      "level": "Advanced",
+      "schedule": {
+        days: [
+          'Monday',
+          'Wednesday',
+          'Friday',
+        ]
+      },
+      "creationDate": "2024-03-20T15:59:31.168Z",
+      "category": "Fat Loss",
     },
     {"id": 4,
       "name": "Aerobic Training",
       "description": "containing Lorem Ipsum passagesand more recently with",
       "thumbnail": "assets/Aerobic.png",
+      "duration": 45,
+      "intensity": "high",
+      "level": "Advanced",
+      "schedule": {
+        days: [
+          'Monday',
+          'Wednesday',
+          'Friday',
+        ]
+      },
+      "creationDate": "2024-03-20T15:59:31.168Z",
+      "category": "Fat Loss",
     }
   ];
   constructor() {}
   getAllClasses() : Class[] {
-    return this.upcomingClassList;
+    return this.ClassList;
     }
 
   getClassById(id: Number): Class | undefined{
-    return this.upcomingClassList.find(sClass => sClass.id === id);
+    return this.ClassList.find(Class => Class.id === id);
   }
 }

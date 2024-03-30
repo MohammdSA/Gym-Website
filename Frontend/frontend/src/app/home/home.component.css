@@ -3,7 +3,7 @@
 
 
 
-.homePageBanner img{
+.banner img{
   padding: 0;
   margin: 0;
   width: 100%;
@@ -53,11 +53,6 @@
   color: var(--black);
   border: none;
 }
-#startToday:hover{
-  background-color: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
-}
 
 #aboutMe{
   background-color: transparent;
@@ -65,7 +60,19 @@
   border: 2px solid var(--white);
 }
 
+#startToday:hover{
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
 #aboutMe:hover {
+  background-color: var(--lightGreen);
+  color: var(--black);
+  border: none;
+}
+
+#startToday:hover ~ #aboutMe{
   background-color: var(--lightGreen);
   color: var(--black);
   border: none;

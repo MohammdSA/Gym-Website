@@ -6,7 +6,7 @@ export interface Class {
   duration: number,
   intensity: string,
   level: string,
-  schedule: string,
+  schedule: object,
   creationDate: string,
   category: string
 }

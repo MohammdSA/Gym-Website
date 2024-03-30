@@ -15,14 +15,10 @@ export class ClassService {
       "intensity": "high",
       "level": "Advanced",
       "schedule": {
-        days: [
-          'Monday',
-          'Wednesday',
-          'Friday',
+        "days": [
+          'Monday', ' Wednesday'
         ]
       },
-      "creationDate": "2024-03-20T15:59:31.168Z",
-      "category": "Fat Loss",
     },
     {"id": 3,
       "name": "Pilates Training",
@@ -32,14 +28,10 @@ export class ClassService {
       "intensity": "high",
       "level": "Advanced",
       "schedule": {
-        days: [
-          'Monday',
-          'Wednesday',
-          'Friday',
+        "days": [
+          'Monday', ' Friday'
         ]
       },
-      "creationDate": "2024-03-20T15:59:31.168Z",
-      "category": "Fat Loss",
     },
     {"id": 4,
       "name": "Aerobic Training",
@@ -49,14 +41,10 @@ export class ClassService {
       "intensity": "high",
       "level": "Advanced",
       "schedule": {
-        days: [
-          'Monday',
-          'Wednesday',
-          'Friday',
+        "days": [
+          'Monday', ' Wednesday', ' Friday'
         ]
       },
-      "creationDate": "2024-03-20T15:59:31.168Z",
-      "category": "Fat Loss",
     }
   ];
   constructor() {}

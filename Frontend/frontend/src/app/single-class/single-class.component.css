@@ -3,4 +3,71 @@
 .bannerTitle{
   transform: translateY(-490%);
   font-size: 64px;
+  margin: 0;
+  padding: 0;
+}
+
+.classDetailsContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 15%;
+  padding: 0;
+}
+
+.classDetailsContainer img{
+  width: 70%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.classDetails{
+  background-color: var(--dropWhite);
+  margin-left: 3%;
+  margin-bottom: 25%;
+  padding: 40px 22px 20px;
+  width: 22%;
+  height: auto;
+}
+
+.classDetails h2{
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.classDetails p{
+  opacity: 0.98;
+  color: var(--darkGray);
+  font-size: 12px;
+}
+
+.classDetails p span{
+  color: var(--black);
+  font-weight: bold;
+  opacity: 1;
+}
+
+.classDetails button{
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  font-size: 14px;
+  color: var(--white);
+  background: var(--black);
+  border: none;
+  padding: 5% 15%;
+  text-align: center;
+  text-wrap: avoid !important;
+  white-space: nowrap;
+}
+
+.classDetails > *:not(h2){
+  margin-top: 12%;
+}
+
+.classDetails .classDescription{
+  margin: 2% 0 0;
+  padding: 0;
 }

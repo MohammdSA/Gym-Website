@@ -22,12 +22,13 @@ import {Class} from "../class";
         <p class="classDuration">Duration: <span>{{singleClass?.duration}}</span></p>
         <p class="classDuration">Intensity: <span>{{singleClass?.intensity}}</span></p>
         <p class="classDuration">Fitness Level: <span>{{singleClass?.level}}</span></p>
-        <p class="classDuration">Schedule: <span>{{singleClass?.schedule}}</span></p>
+        <p class="classDuration">Schedule: <span>{{singleClass?.schedule?.days}} </span></p>
         <button>Book a Class</button>
       </div>
-      <div class="otherClassDetails">
-        <p class="classDate"
-      </div>
+    </section>
+
+    <section class="blogSection">
+
     </section>
   `,
   styleUrl: './single-class.component.css'

@@ -1,1 +1,6 @@
 @import "../home/home.component.css";
+
+.bannerTitle{
+  transform: translateY(-490%);
+  font-size: 64px;
+}

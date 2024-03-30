@@ -13,7 +13,7 @@ import {ClassService} from "../class.service";
     <section class="banner">
       <img src="assets/banner.png">
       <div class="bannerContent">
-        <h1>Keep Your Body <br> Fit & Strong</h1>
+        <h1 class="bannerTitle">Keep Your Body <br> Fit & Strong</h1>
         <div>
           <button id="startToday" class="btn">Start Today</button>
           <button id="aboutMe" class="btn">About Me</button>

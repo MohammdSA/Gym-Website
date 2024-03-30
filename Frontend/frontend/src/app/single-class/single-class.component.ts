@@ -10,13 +10,23 @@ import {Class} from "../class";
   imports: [CommonModule],
   template: `
     <section class="banner">
-      <img src="assets/classbanner.png">
-      <div class="bannerContent">
-        <h1>Keep Your Body <br> Fit & Strong</h1>
-        <div>
-          <button id="startToday" class="btn">Start Today</button>
-          <button id="aboutMe" class="btn">About Me</button>
-        </div>
+      <img src="assets/classSingleBanner.jpg">
+      <h1 class="bannerTitle">{{singleClass?.name}}</h1>
+    </section>
+
+    <section class="classDetailsContainer">
+      <img [src]="singleClass?.thumbnail">
+      <div class="classDetails">
+        <h2>Class Details</h2>
+        <p class="classDescription">{{singleClass?.description}}</p>
+        <p class="classDuration">Duration: <span>{{singleClass?.duration}}</span></p>
+        <p class="classDuration">Intensity: <span>{{singleClass?.intensity}}</span></p>
+        <p class="classDuration">Fitness Level: <span>{{singleClass?.level}}</span></p>
+        <p class="classDuration">Schedule: <span>{{singleClass?.schedule}}</span></p>
+        <button>Book a Class</button>
+      </div>
+      <div class="otherClassDetails">
+        <p class="classDate"
       </div>
     </section>
   `,

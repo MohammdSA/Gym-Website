@@ -12,8 +12,6 @@ class Class(models.Model):
     intensity = models.CharField(max_length=20, blank=False)
     level = models.CharField(max_length=20, blank=False)
     schedule = models.JSONField()
-    creationDate = models.DateTimeField(auto_now_add=True)
-    category = models.CharField(max_length=50, blank=False, null=True)
 
     def __str__(self):
         return f"{self.name} Class"

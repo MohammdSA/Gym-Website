@@ -10,6 +10,7 @@ import {HomeComponent} from './home/home.component';
   template: `
     <html lang="en">
     <head>
+      <base href="/">
       <meta charset="UTF-8">
       <title></title>
     </head>
@@ -17,7 +18,7 @@ import {HomeComponent} from './home/home.component';
       <header>
         <nav class="navBar">
           <div class="navBarLogo">
-            <img src="assets/Logo.png" alt="logo" />
+            <img [src]="'assets/Logo.png'" alt="logo" />
             <h2>Strengthy</h2>
           </div>
           <div class="navBarMenu">

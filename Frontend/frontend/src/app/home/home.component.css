@@ -17,13 +17,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.bannerContent h1{
+.bannerTitle{
   color: var(--white);
   font-weight: bolder;
   font-family: "Inter", sans-serif;

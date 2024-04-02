@@ -22,7 +22,7 @@ import {Title} from "@angular/platform-browser";
       <div class="classDetails">
         <h2>Class Details</h2>
         <p class="classDescription">{{singleClass?.description}}</p>
-        <p class="classDuration">Duration:<span>&nbsp;{{singleClass?.duration}} MINUTES</span></p>
+        <p class="classDuration">Duration:<span style="text-transform: uppercase">&nbsp;{{singleClass?.duration}} minutes</span></p>
         <p class="classDuration">Intensity: <span>&nbsp;{{singleClass?.intensity}}</span></p>
         <p class="classDuration">Fitness Level: <span>&nbsp;{{singleClass?.level}}</span></p>
         <p class="classDuration">Schedule: <span>&nbsp;{{singleClass?.schedule?.days}} </span></p>

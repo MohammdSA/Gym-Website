@@ -8,7 +8,7 @@ import {HomeComponent} from './home/home.component';
   standalone: true,
   imports: [CommonModule, RouterModule, HomeComponent],
   template: `
-    <html lang="en">
+      <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
       <base href="/">
       <meta charset="UTF-8">
@@ -48,25 +48,41 @@ import {HomeComponent} from './home/home.component';
               </div>
               <div class="footerContainer">
                 <div class="footerCol1">
-                  <div class="footerLogo">
-                    <img [src]="'assets/Logo.png'" alt="logo" />
-                    <h2>Strengthy</h2>
+                  <div class="footerLogoContainer">
+                    <div class="footerLogo">
+                      <img [src]="'assets/Logo.png'" alt="logo" />
+                      <h2 class="footerHeader">Strengthy</h2>
+                    </div>
+                    <p>It is a long established fact that a reader will be distracted by the readable.</p>
                   </div>
-                  <p>It is a long established fact that a reader will be distracted by the readable.</p>
+
                   <div class="footerContactUs">
                     <div class="call">
-
+                      <h2>Call:</h2>
+                      <p>01234 987654</p>
+                      <p>098765 34621</p>
                     </div>
                     <div class="mail">
-
+                      <h2>Mail:</h2>
+                      <p>contact&#64;fitnessfit.com</p>
                     </div>
                   </div>
                 </div>
                 <div class="footerCol2">
-
+                  <h2 class="footerHeader">Utility Pages</h2>
+                  <ul>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">404 Page</a></li>
+                    <li><a href="#">Password Protected</a></li>
+                    <li><a href="#">Licenses</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
                 </div>
                 <div class="footerCol3">
-
+                  <h2 class="footerHeader">Newsletter</h2>
+                  <input type="email" placeholder="enter your email">
+                  <button class="subscribeBtn">Subscribe</button>
                 </div>
               </div>
             </div>

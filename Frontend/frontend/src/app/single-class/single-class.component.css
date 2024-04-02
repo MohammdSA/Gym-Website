@@ -1,17 +1,10 @@
 @import "../home/home.component.css";
 
-.bannerTitle{
-  transform: translateY(-490%);
-  font-size: 64px;
-  margin: 0;
-  padding: 0;
-}
-
 .classDetailsContainer{
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 15%;
+  margin: 10% 15%;
   padding: 0;
 }
 

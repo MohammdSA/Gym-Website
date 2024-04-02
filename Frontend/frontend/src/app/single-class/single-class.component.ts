@@ -11,8 +11,10 @@ import {Title} from "@angular/platform-browser";
   imports: [CommonModule],
   template: `
     <section class="banner">
-      <img src="assets/classSingleBanner.jpg">
-      <h1 class="bannerTitle">{{singleClass?.name}}</h1>
+      <img src="assets/classSingleBanner.jpg" class="bannerImg">
+      <div class="bannerContent">
+        <h1 class="bannerTitle">{{singleClass?.name}}</h1>
+      </div>
     </section>
 
     <section class="classDetailsContainer">

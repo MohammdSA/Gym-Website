@@ -11,7 +11,7 @@ import {ClassService} from "../class.service";
   imports: [CommonModule, ClassComponent, RouterOutlet],
   template: `
     <section class="banner">
-      <img src="assets/banner.png">
+      <img src="assets/banner.png" class="bannerImg">
       <div class="bannerContent">
         <h1 class="bannerTitle">Keep Your Body <br> Fit & Strong</h1>
         <div>

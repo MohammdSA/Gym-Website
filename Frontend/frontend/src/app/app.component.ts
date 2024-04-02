@@ -83,6 +83,13 @@ import {HomeComponent} from './home/home.component';
                   <h2 class="footerHeader">Newsletter</h2>
                   <input type="email" placeholder="enter your email">
                   <button class="subscribeBtn">Subscribe</button>
+                  <div class="socialBtn">
+
+                  </div>
+                  <div class="footerHr">
+                    <hr>
+                    <div></div>
+                  </div>
                 </div>
               </div>
             </div>

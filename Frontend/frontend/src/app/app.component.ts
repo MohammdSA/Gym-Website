@@ -50,7 +50,7 @@ import {HomeComponent} from './home/home.component';
                 <div></div>
               </div>
             </div>
-            <div class="copyRight">Copyright © FitnessFit | Designed byVictorFlow Templates - Powered by Webflow</div>
+            <div class="copyRight">Copyright © <Span style="color: var(--blue)">FitnessFit</Span> | Designed byVictorFlow Templates - Powered by Webflow</div>
           </footer>
         </div>
     </body>

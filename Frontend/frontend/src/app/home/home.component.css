@@ -89,10 +89,10 @@
 
 #classicPattern{
   position: absolute;
-  right: 0;
-  transform: translateY(-3em);
+  right: -12%;
+  transform: translateY(-2.7em);
   z-index: -99;
-  width: 60%;
+  width: 75%;
   height: auto;
 }
 

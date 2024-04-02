@@ -5,54 +5,29 @@ import {Class} from "./class";
   providedIn: 'root'
 })
 export class ClassService {
-  protected ClassList: Class[] = [
-    {
-      "id": 1,
-      "name": "Yoga as Therapy",
-      "description": "Objectively innovate empowered manufactured products",
-      "thumbnail": "assets/Image.png",
-      "duration": 45,
-      "intensity": "high",
-      "level": "Advanced",
-      "schedule": {
-        "days": [
-          'Monday', ' Wednesday'
-        ]
-      },
-    },
-    {"id": 3,
-      "name": "Pilates Training",
-      "description": "containing Lorem Ipsum passagesand more recently with",
-      "thumbnail": "assets/Pilates Training.png",
-      "duration": 45,
-      "intensity": "high",
-      "level": "Advanced",
-      "schedule": {
-        "days": [
-          'Monday', ' Friday'
-        ]
-      },
-    },
-    {"id": 4,
-      "name": "Aerobic Training",
-      "description": "containing Lorem Ipsum passagesand more recently with",
-      "thumbnail": "assets/Aerobic.png",
-      "duration": 45,
-      "intensity": "high",
-      "level": "Advanced",
-      "schedule": {
-        "days": [
-          'Monday', ' Wednesday', ' Friday'
-        ]
-      },
-    }
-  ];
-  constructor() {}
-  getAllClasses() : Class[] {
-    return this.ClassList;
-    }
+  url = 'http://127.0.0.1:8000/classes';
 
-  getClassById(id: Number): Class | undefined{
-    return this.ClassList.find(Class => Class.id === id);
+
+  constructor() {}
+
+  async getAllClasses() : Promise<Class[]> {
+    const res = await fetch(this.url)
+    const data = await res.json()
+    data.forEach((e: any) => {
+      const oldThumb = e.thumbnail;
+      const backUrl = this.url.replace('/classes', '')
+      e.thumbnail = `${backUrl}/media/${oldThumb}`
+    })
+    return await data ?? [];
+  }
+
+  async getClassById(id: Number): Promise<Class | undefined> {
+    const res = await fetch(`${this.url}/${id}`)
+    const data = await res.json()
+    const oldThumb = data.thumbnail;
+    const backUrl = this.url.replace('/classes', '')
+    data.thumbnail = `${backUrl}/media/${oldThumb}`
+
+    return await data ?? {};
   }
 }

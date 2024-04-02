@@ -3,6 +3,7 @@ import {CommonModule} from "@angular/common";
 import {ActivatedRoute} from "@angular/router";
 import {ClassService} from "../class.service";
 import {Class} from "../class";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-single-class',
@@ -19,10 +20,10 @@ import {Class} from "../class";
       <div class="classDetails">
         <h2>Class Details</h2>
         <p class="classDescription">{{singleClass?.description}}</p>
-        <p class="classDuration">Duration: <span>{{singleClass?.duration}}</span></p>
-        <p class="classDuration">Intensity: <span>{{singleClass?.intensity}}</span></p>
-        <p class="classDuration">Fitness Level: <span>{{singleClass?.level}}</span></p>
-        <p class="classDuration">Schedule: <span>{{singleClass?.schedule?.days}} </span></p>
+        <p class="classDuration">Duration:<span>&nbsp;{{singleClass?.duration}} MINUTES</span></p>
+        <p class="classDuration">Intensity: <span>&nbsp;{{singleClass?.intensity}}</span></p>
+        <p class="classDuration">Fitness Level: <span>&nbsp;{{singleClass?.level}}</span></p>
+        <p class="classDuration">Schedule: <span>&nbsp;{{singleClass?.schedule?.days}} </span></p>
         <button>Book a Class</button>
       </div>
     </section>
@@ -38,8 +39,11 @@ export class SingleClassComponent {
   classService = inject(ClassService);
   singleClass: Class | undefined;
 
-  constructor() {
+  constructor(private titleService: Title) {
     const classId = Number(this.route.snapshot.params['id']);
-    this.singleClass = this.classService.getClassById(classId);
+    this.classService.getClassById(classId).then(singleClass => {
+      this.singleClass = singleClass;
+      this.titleService.setTitle(`Class: ${this.singleClass?.name}`);
+    })
   }
 }

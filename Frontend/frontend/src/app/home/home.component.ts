@@ -47,9 +47,11 @@ import {ClassService} from "../class.service";
 export class HomeComponent {
   upcomingClassList: Class[] = [];
   upcomingClassService: ClassService = inject(ClassService);
+  title = 'Home'
 
   constructor() {
-    this.upcomingClassList = this.upcomingClassService.getAllClasses();
-
+    this.upcomingClassService.getAllClasses().then((upcomingClassList: Class[]) => {
+      this.upcomingClassList = upcomingClassList;
+    })
   }
 }

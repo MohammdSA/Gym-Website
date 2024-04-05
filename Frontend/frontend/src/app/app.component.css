@@ -310,3 +310,31 @@ footer{
 .subscribeBtn:active{
   scale: 0.98;
 }
+
+.socialButtons{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  color: var(--white);
+  margin: 10% 0;
+}
+
+.socialBtn{
+  color: var(--white);
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.socialBtn:active{
+  scale: 0.98;
+}
+.socialBtn #footerInstagramBtn:hover{
+  color: #cd486b;
+}
+.socialBtn #footerFacebookBtn:hover{
+  color: #1877F2;
+}
+.socialBtn #footerXBtn:hover{
+  color: var(--lightGreen);
+}

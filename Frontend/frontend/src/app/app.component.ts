@@ -2,11 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {HomeComponent} from './home/home.component';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import {bootstrapInstagram} from "@ng-icons/bootstrap-icons";
+import {bootstrapFacebook} from "@ng-icons/bootstrap-icons";
+import {bootstrapTwitterX} from "@ng-icons/bootstrap-icons";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, HomeComponent],
+  imports: [CommonModule, RouterModule, HomeComponent, NgIconComponent],
+  viewProviders: [provideIcons({ bootstrapInstagram, bootstrapFacebook, bootstrapTwitterX })],
   template: `
       <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
@@ -83,8 +88,10 @@ import {HomeComponent} from './home/home.component';
                   <h2 class="footerHeader">Newsletter</h2>
                   <input type="email" placeholder="enter your email">
                   <button class="subscribeBtn">Subscribe</button>
-                  <div class="socialBtn">
-
+                  <div class="socialButtons">
+                    <a href="https://www.instagram.com" class="socialBtn" target="_blank"><ng-icon name="bootstrapInstagram" id="footerInstagramBtn"></ng-icon></a>
+                    <a class="socialBtn" href="https://www.facebook.com" target="_blank"><ng-icon name="bootstrapFacebook" id="footerFacebookBtn"></ng-icon></a>
+                    <a class="socialBtn" href="https://twitter.com/?lang=en" target="_blank"><ng-icon name="bootstrapTwitterX" id="footerXBtn"></ng-icon></a>
                   </div>
                   <div class="footerHr">
                     <hr>

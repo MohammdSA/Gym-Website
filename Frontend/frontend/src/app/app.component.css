@@ -338,3 +338,32 @@ footer{
 .socialBtn #footerXBtn:hover{
   color: var(--lightGreen);
 }
+
+.footerHr{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 5% 0;
+  padding: 0;
+}
+
+.footerHr hr{
+  width: 85%;
+  justify-self: left;
+  opacity: 0.8;
+}
+
+.footerHr #footerArrowUp{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  transition: 0.5s ease;
+}
+.footerHr #footerArrowUp:hover{
+  color: rgba(255, 255, 255, 1);
+}
+
+.footerHr #footerArrowUp:active{
+  scale: 0.98;
+}

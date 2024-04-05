@@ -6,12 +6,13 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {bootstrapInstagram} from "@ng-icons/bootstrap-icons";
 import {bootstrapFacebook} from "@ng-icons/bootstrap-icons";
 import {bootstrapTwitterX} from "@ng-icons/bootstrap-icons";
+import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterModule, HomeComponent, NgIconComponent],
-  viewProviders: [provideIcons({ bootstrapInstagram, bootstrapFacebook, bootstrapTwitterX })],
+  viewProviders: [provideIcons({ bootstrapInstagram, bootstrapFacebook, bootstrapTwitterX, bootstrapArrowUpCircle })],
   template: `
       <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
@@ -95,7 +96,7 @@ import {bootstrapTwitterX} from "@ng-icons/bootstrap-icons";
                   </div>
                   <div class="footerHr">
                     <hr>
-                    <div></div>
+                    <a href="#"><ng-icon name="bootstrapArrowUpCircle" id="footerArrowUp"></ng-icon></a>
                   </div>
                 </div>
               </div>

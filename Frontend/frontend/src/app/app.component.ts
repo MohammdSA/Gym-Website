@@ -49,7 +49,7 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
               <div class="footerBanner">
                 <img [src]="'assets/Follow%20Us%20on%20instagram.jpg'" alt="Follow Us on instagram">
                 <div class="footerBannerContent">
-                  <h2 class="followUsOnInstagram">Follow us on <a href="#">Instagram</a> </h2>
+                  <h2 class="followUsOnInstagram">Follow us on <a href="https://www.instagram.com" target="_blank">Instagram</a> </h2>
                 </div>
               </div>
               <div class="footerContainer">

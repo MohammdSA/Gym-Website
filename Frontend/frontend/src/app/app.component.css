@@ -155,6 +155,7 @@ footer{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  margin: 0;
 }
 
 .footerCol1{
@@ -344,7 +345,7 @@ footer{
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.5);
-  margin: 5% 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -366,4 +367,13 @@ footer{
 
 .footerHr #footerArrowUp:active{
   scale: 0.98;
+}
+
+.copyRight{
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+  text-align: center;
+  justify-self: center;
+  transform: translateY(-100%);
 }

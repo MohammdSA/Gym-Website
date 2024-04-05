@@ -1,18 +1,19 @@
 from .models import Class, Trainer
 from django.http import JsonResponse
 from fastapi import FastAPI
+import json
 
 app = FastAPI()
 
 
 # Create your views here.
-def getClasses(request):
-    @app.post("/getClasses")
-    def getClass():
-        classes = Class.objects.all()
-        # classes_json = serialize('json', classes)
-        x = list(classes.values())
-        print(x)
-        return JsonResponse(x, safe=False)
-    return getClass()
+def classes(request):
+    class_list = Class.objects.all().values()
+    class_json = list(class_list)
+    return JsonResponse(class_json, safe=False, json_dumps_params={'indent': 4})
+
+
+def classDetails(request, id):
+    class_list = Class.objects.all().values().get(id=id)
+    return JsonResponse(class_list, safe=False, json_dumps_params={'indent': 4})
 

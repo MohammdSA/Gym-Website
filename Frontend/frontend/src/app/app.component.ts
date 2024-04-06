@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {HomeComponent} from './home/home.component';
@@ -21,7 +21,7 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
       <title></title>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="container">
           <header>
             <nav class="navBar">
               <div class="navBarLogo">
@@ -31,11 +31,11 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
               <div class="navBarMenu">
                 <ul>
                   <li><a href="">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Classes</a></li>
-                  <li><a href="#">Trainers</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#About">About</a></li>
+                  <li><a href="#Classes">Classes</a></li>
+                  <li><a href="#Trainers">Trainers</a></li>
+                  <li><a href="#News">News</a></li>
+                  <li><a href="#Contact">Contact</a></li>
                 </ul>
                 <button>Book Class</button>
               </div>
@@ -77,12 +77,12 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
                 <div class="footerCol2">
                   <h2 class="footerHeader">Utility Pages</h2>
                   <ul>
-                    <li><a href="#">Style Guide</a></li>
-                    <li><a href="#">Changelog</a></li>
-                    <li><a href="#">404 Page</a></li>
-                    <li><a href="#">Password Protected</a></li>
-                    <li><a href="#">Licenses</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#Style Guide">Style Guide</a></li>
+                    <li><a href="#Changelog">Changelog</a></li>
+                    <li><a href="#404 Page">404 Page</a></li>
+                    <li><a href="#Password Protected">Password Protected</a></li>
+                    <li><a href="#Licenses">Licenses</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                   </ul>
                 </div>
                 <div class="footerCol3">
@@ -96,7 +96,7 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
                   </div>
                   <div class="footerHr">
                     <hr>
-                    <a href="#"><ng-icon name="bootstrapArrowUpCircle" id="footerArrowUp"></ng-icon></a>
+                    <ng-icon name="bootstrapArrowUpCircle" id="footerArrowUp"></ng-icon>
                   </div>
                 </div>
               </div>
@@ -110,4 +110,19 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'frontend';}
+  title = 'frontend';
+
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit(): void {
+    const footerArrowUp: HTMLElement | null = document.getElementById('footerArrowUp');
+
+    if(footerArrowUp){
+      footerArrowUp.addEventListener('click', () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    }
+  }
+
+}

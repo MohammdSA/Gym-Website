@@ -7,12 +7,13 @@ import {bootstrapInstagram} from "@ng-icons/bootstrap-icons";
 import {bootstrapFacebook} from "@ng-icons/bootstrap-icons";
 import {bootstrapTwitterX} from "@ng-icons/bootstrap-icons";
 import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
+import {faSolidAlignJustify} from "@ng-icons/font-awesome/solid";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterModule, HomeComponent, NgIconComponent],
-  viewProviders: [provideIcons({ bootstrapInstagram, bootstrapFacebook, bootstrapTwitterX, bootstrapArrowUpCircle })],
+  viewProviders: [provideIcons({ bootstrapInstagram, bootstrapFacebook, bootstrapTwitterX, bootstrapArrowUpCircle, faSolidAlignJustify })],
   template: `
       <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
@@ -39,6 +40,7 @@ import {bootstrapArrowUpCircle} from "@ng-icons/bootstrap-icons";
                 </ul>
                 <button>Book Class</button>
               </div>
+<!--               <a ><ng-icon name="faSolidAlignJustify" id="menuIcon"></ng-icon> </a>-->
             </nav>
           </header>
 
@@ -118,9 +120,8 @@ export class AppComponent {
     const footerArrowUp: HTMLElement | null = document.getElementById('footerArrowUp');
 
     if(footerArrowUp){
-      footerArrowUp.addEventListener('click', () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+      this.renderer.listen(footerArrowUp, 'click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
   }
